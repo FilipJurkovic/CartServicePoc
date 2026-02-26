@@ -1,0 +1,6 @@
+﻿services:
+  cartservicepoc:
+    image: cartservicepoc
+    build:
+      context: .
+      dockerfile: CartServicePoc/Dockerfile
