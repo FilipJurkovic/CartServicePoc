@@ -17,4 +17,13 @@
         <Link>.dockerignore</Link>
       </Content>
     </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Api\Controllers\" />
+      <Folder Include="Api\DTOs\" />
+      <Folder Include="Application\Interfaces\" />
+      <Folder Include="Application\Services\" />
+      <Folder Include="Infrastructure\Cache\" />
+      <Folder Include="Infrastructure\Repositories\" />
+    </ItemGroup>
 </Project>
