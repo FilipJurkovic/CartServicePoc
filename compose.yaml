@@ -4,3 +4,34 @@
     build:
       context: .
       dockerfile: CartServicePoc/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Server=sqlserver,1433;Database=CartServiceDb;User Id=Developer;Password=YourStrong!Passw0rd;TrustServerCertificate=true;
+      - ConnectionStrings__Redis=redis:6379
+    depends_on:
+      - sqlserver
+      - redis
+    ports:
+      - "5001:8080"
+
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: cartservice-sql
+    platform: linux/amd64
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "YourStrong!Passw0rd"
+      MSSQL_PID: "Developer"
+    ports:
+      - "1433:1433"
+    volumes:
+      - sqlserver-data:/var/opt/mssql
+
+  redis:
+    image: redis:7-alpine
+    container_name: cartservice-redis
+    ports:
+      - "6379:6379"
+
+volumes:
+  sqlserver-data:
