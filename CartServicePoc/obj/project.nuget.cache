@@ -1,12 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "b6+S6ACg328=",
+  "dgSpecHash": "PJiPgrR3Yjs=",
   "success": true,
   "projectFilePath": "/Users/filipjurkovic/Dev/CartServicePoc/CartServicePoc/CartServicePoc.csproj",
   "expectedPackageFiles": [
     "/Users/filipjurkovic/.nuget/packages/azure.core/1.50.0/azure.core.1.50.0.nupkg.sha512",
     "/Users/filipjurkovic/.nuget/packages/azure.identity/1.17.1/azure.identity.1.17.1.nupkg.sha512",
     "/Users/filipjurkovic/.nuget/packages/dapper/2.1.66/dapper.2.1.66.nupkg.sha512",
+    "/Users/filipjurkovic/.nuget/packages/dbup-core/6.1.1/dbup-core.6.1.1.nupkg.sha512",
+    "/Users/filipjurkovic/.nuget/packages/dbup-sqlserver/7.2.0/dbup-sqlserver.7.2.0.nupkg.sha512",
     "/Users/filipjurkovic/.nuget/packages/microsoft.bcl.asyncinterfaces/8.0.0/microsoft.bcl.asyncinterfaces.8.0.0.nupkg.sha512",
     "/Users/filipjurkovic/.nuget/packages/microsoft.data.sqlclient/6.1.4/microsoft.data.sqlclient.6.1.4.nupkg.sha512",
     "/Users/filipjurkovic/.nuget/packages/microsoft.data.sqlclient.sni.runtime/6.0.2/microsoft.data.sqlclient.sni.runtime.6.0.2.nupkg.sha512",

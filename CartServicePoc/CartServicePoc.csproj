@@ -10,6 +10,7 @@
 
     <ItemGroup>
         <PackageReference Include="Dapper" Version="2.1.66" />
+        <PackageReference Include="dbup-sqlserver" Version="7.2.0" />
         <PackageReference Include="Microsoft.Data.SqlClient" Version="6.1.4" />
         <PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" Version="10.0.3" />
         <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
@@ -29,6 +30,9 @@
       <Folder Include="Api\Controllers\" />
       <Folder Include="Api\DTOs\" />
       <Folder Include="Infrastructure\Cache\" />
-      <Folder Include="Infrastructure\Repositories\" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <EmbeddedResource Include="Infrastructure/Database/Migrations/**/*.sql" />
     </ItemGroup>
 </Project>

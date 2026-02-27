@@ -51,6 +51,39 @@
           }
         }
       },
+      "dbup-core/6.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Logging.Abstractions": "8.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/dbup-core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/dbup-core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "dbup-sqlserver/7.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Data.SqlClient": "6.1.4",
+          "dbup-core": "6.1.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/dbup-sqlserver.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/dbup-sqlserver.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Bcl.AsyncInterfaces/8.0.0": {
         "type": "package",
         "compile": {
@@ -1544,6 +1577,35 @@
         "lib/netstandard2.0/Dapper.dll",
         "lib/netstandard2.0/Dapper.xml",
         "readme.md"
+      ]
+    },
+    "dbup-core/6.1.1": {
+      "sha512": "kgpuyJVEFJHoIj/slnc994Go88aoeZqNDfGHDBr4sh7CsEWwJhOTCt/FJqO4ziUImL5L0NEY0kxxOiNgPKI2Fw==",
+      "type": "package",
+      "path": "dbup-core/6.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "dbup-core.6.1.1.nupkg.sha512",
+        "dbup-core.nuspec",
+        "dbup-icon.png",
+        "lib/netstandard2.0/dbup-core.dll",
+        "lib/netstandard2.0/dbup-core.xml"
+      ]
+    },
+    "dbup-sqlserver/7.2.0": {
+      "sha512": "1xhdu2ZoQEi2nNrirBfkkfn+AbHWQvy8CGilb+5dIjghFJrsMKFM17DiI5Nz+ofWg9N1lqz5WorujzuGvc/+fQ==",
+      "type": "package",
+      "path": "dbup-sqlserver/7.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "dbup-icon.png",
+        "dbup-sqlserver.7.2.0.nupkg.sha512",
+        "dbup-sqlserver.nuspec",
+        "lib/netstandard2.0/dbup-sqlserver.dll",
+        "lib/netstandard2.0/dbup-sqlserver.xml"
       ]
     },
     "Microsoft.Bcl.AsyncInterfaces/8.0.0": {
@@ -3732,7 +3794,8 @@
       "Serilog.AspNetCore >= 10.0.0",
       "Serilog.Sinks.Console >= 6.1.1",
       "StackExchange.Redis >= 2.11.8",
-      "Swashbuckle.AspNetCore >= 10.1.4"
+      "Swashbuckle.AspNetCore >= 10.1.4",
+      "dbup-sqlserver >= 7.2.0"
     ]
   },
   "packageFolders": {
@@ -3804,6 +3867,10 @@
           "Swashbuckle.AspNetCore": {
             "target": "Package",
             "version": "[10.1.4, )"
+          },
+          "dbup-sqlserver": {
+            "target": "Package",
+            "version": "[7.2.0, )"
           }
         },
         "imports": [
