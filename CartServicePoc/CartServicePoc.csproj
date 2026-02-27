@@ -28,7 +28,6 @@
 
     <ItemGroup>
       <Folder Include="Api\Controllers\" />
-      <Folder Include="Api\DTOs\" />
       <Folder Include="Infrastructure\Cache\" />
     </ItemGroup>
 
