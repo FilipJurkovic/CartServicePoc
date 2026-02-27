@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "V87YK4djAgg=",
+  "dgSpecHash": "t8Jc3glzymw=",
   "success": true,
   "projectFilePath": "/Users/filipjurkovic/Dev/CartServicePoc/CartServicePoc/CartServicePoc.csproj",
   "expectedPackageFiles": [
+    "/Users/filipjurkovic/.nuget/packages/aspnetcore.healthchecks.redis/9.0.0/aspnetcore.healthchecks.redis.9.0.0.nupkg.sha512",
+    "/Users/filipjurkovic/.nuget/packages/aspnetcore.healthchecks.sqlserver/9.0.0/aspnetcore.healthchecks.sqlserver.9.0.0.nupkg.sha512",
     "/Users/filipjurkovic/.nuget/packages/azure.core/1.50.0/azure.core.1.50.0.nupkg.sha512",
     "/Users/filipjurkovic/.nuget/packages/azure.identity/1.17.1/azure.identity.1.17.1.nupkg.sha512",
     "/Users/filipjurkovic/.nuget/packages/dapper/2.1.66/dapper.2.1.66.nupkg.sha512",
@@ -32,6 +34,8 @@
     "/Users/filipjurkovic/.nuget/packages/microsoft.extensions.dependencymodel/10.0.0/microsoft.extensions.dependencymodel.10.0.0.nupkg.sha512",
     "/Users/filipjurkovic/.nuget/packages/microsoft.extensions.diagnostics/8.0.0/microsoft.extensions.diagnostics.8.0.0.nupkg.sha512",
     "/Users/filipjurkovic/.nuget/packages/microsoft.extensions.diagnostics.abstractions/10.0.0/microsoft.extensions.diagnostics.abstractions.10.0.0.nupkg.sha512",
+    "/Users/filipjurkovic/.nuget/packages/microsoft.extensions.diagnostics.healthchecks/8.0.11/microsoft.extensions.diagnostics.healthchecks.8.0.11.nupkg.sha512",
+    "/Users/filipjurkovic/.nuget/packages/microsoft.extensions.diagnostics.healthchecks.abstractions/8.0.11/microsoft.extensions.diagnostics.healthchecks.abstractions.8.0.11.nupkg.sha512",
     "/Users/filipjurkovic/.nuget/packages/microsoft.extensions.fileproviders.abstractions/10.0.0/microsoft.extensions.fileproviders.abstractions.10.0.0.nupkg.sha512",
     "/Users/filipjurkovic/.nuget/packages/microsoft.extensions.fileproviders.physical/8.0.0/microsoft.extensions.fileproviders.physical.8.0.0.nupkg.sha512",
     "/Users/filipjurkovic/.nuget/packages/microsoft.extensions.filesystemglobbing/8.0.0/microsoft.extensions.filesystemglobbing.8.0.0.nupkg.sha512",

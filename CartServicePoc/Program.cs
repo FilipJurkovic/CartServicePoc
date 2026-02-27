@@ -9,6 +9,7 @@ using CartServicePoc.Infrastructure.Repositories;
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.Data.SqlClient;
 using Serilog;
 
@@ -50,6 +51,18 @@ builder.Services.AddStackExchangeRedisCache(options =>
 builder.Services.AddSingleton<ICacheService, CacheService>();
 
 
+builder.Services.AddHealthChecks()
+    .AddSqlServer(
+        builder.Configuration.GetConnectionString("DefaultConnection")!,
+        name: "sqlserver",
+        tags: ["ready"])
+    .AddRedis(
+        builder.Configuration.GetConnectionString("Redis")!,
+        name: "redis",
+        tags: ["ready"]);
+
+
+
 var app = builder.Build();
 
 //Middleware za globalno hvatanje grešaka
@@ -65,5 +78,16 @@ app.UseSwaggerUI();
 
 app.UseSerilogRequestLogging();
 app.MapControllers();
+
+app.MapHealthChecks("/health/live", new HealthCheckOptions
+{
+    Predicate = _ => false
+});
+
+app.MapHealthChecks("/health/ready", new HealthCheckOptions
+{
+    Predicate = check => check.Tags.Contains("ready")
+});
+
 
 app.Run();
