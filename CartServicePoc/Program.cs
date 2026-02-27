@@ -1,5 +1,6 @@
 using System.Data;
 using CartServicePoc;
+using CartServicePoc.Api.Middleware;
 using CartServicePoc.Api.Validators;
 using CartServicePoc.Application.Interfaces;
 using CartServicePoc.Infrastructure.Database;
@@ -39,6 +40,9 @@ builder.Services.AddFluentValidationAutoValidation();
 builder.Services.AddValidatorsFromAssemblyContaining<AddCartItemRequestValidator>();
 
 var app = builder.Build();
+
+//Middleware za globalno hvatanje grešaka
+app.UseMiddleware<ErrorHandlingMiddleware>();
 
 // Migracije
 DbMigrator.MigrateDatabase(
