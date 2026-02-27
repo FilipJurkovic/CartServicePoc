@@ -3,6 +3,7 @@ using CartServicePoc;
 using CartServicePoc.Api.Middleware;
 using CartServicePoc.Api.Validators;
 using CartServicePoc.Application.Interfaces;
+using CartServicePoc.Infrastructure.Cache;
 using CartServicePoc.Infrastructure.Database;
 using CartServicePoc.Infrastructure.Repositories;
 using FluentValidation;
@@ -39,6 +40,16 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddFluentValidationAutoValidation();
 builder.Services.AddValidatorsFromAssemblyContaining<AddCartItemRequestValidator>();
 
+// Redis Cache
+builder.Services.AddStackExchangeRedisCache(options =>
+{
+    options.Configuration = builder.Configuration.GetConnectionString("Redis");
+    options.InstanceName = "CartService:";
+});
+
+builder.Services.AddSingleton<ICacheService, CacheService>();
+
+
 var app = builder.Build();
 
 //Middleware za globalno hvatanje grešaka
@@ -48,11 +59,9 @@ app.UseMiddleware<ErrorHandlingMiddleware>();
 DbMigrator.MigrateDatabase(
     builder.Configuration.GetConnectionString("DefaultConnection")!);
 
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.UseSerilogRequestLogging();
 app.MapControllers();

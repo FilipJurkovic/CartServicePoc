@@ -13,7 +13,6 @@
         "packagesPath": "/Users/filipjurkovic/.nuget/packages/",
         "outputPath": "/Users/filipjurkovic/Dev/CartServicePoc/CartServicePoc/obj/",
         "projectStyle": "PackageReference",
-        "UsingMicrosoftNETSdk": false,
         "configFilePaths": [
           "/Users/filipjurkovic/.nuget/NuGet/NuGet.Config"
         ],
@@ -66,10 +65,6 @@
             "Serilog.Sinks.Console": {
               "target": "Package",
               "version": "[6.1.1, )"
-            },
-            "StackExchange.Redis": {
-              "target": "Package",
-              "version": "[2.11.8, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

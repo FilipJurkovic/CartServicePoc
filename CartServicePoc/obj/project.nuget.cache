@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "vMLW+U0V53s=",
+  "dgSpecHash": "HfsFTyG0k2hilbNoblzgr7cUQgiraUE10fGi2TqVUN+Bzm6Xh0lQ3mQChhmjQVR6J5aICASVrCwOd8WTNtOJmQ==",
   "success": true,
   "projectFilePath": "/Users/filipjurkovic/Dev/CartServicePoc/CartServicePoc/CartServicePoc.csproj",
   "expectedPackageFiles": [
@@ -67,7 +67,7 @@
     "/Users/filipjurkovic/.nuget/packages/serilog.sinks.console/6.1.1/serilog.sinks.console.6.1.1.nupkg.sha512",
     "/Users/filipjurkovic/.nuget/packages/serilog.sinks.debug/3.0.0/serilog.sinks.debug.3.0.0.nupkg.sha512",
     "/Users/filipjurkovic/.nuget/packages/serilog.sinks.file/7.0.0/serilog.sinks.file.7.0.0.nupkg.sha512",
-    "/Users/filipjurkovic/.nuget/packages/stackexchange.redis/2.11.8/stackexchange.redis.2.11.8.nupkg.sha512",
+    "/Users/filipjurkovic/.nuget/packages/stackexchange.redis/2.7.27/stackexchange.redis.2.7.27.nupkg.sha512",
     "/Users/filipjurkovic/.nuget/packages/swashbuckle.aspnetcore/10.1.4/swashbuckle.aspnetcore.10.1.4.nupkg.sha512",
     "/Users/filipjurkovic/.nuget/packages/swashbuckle.aspnetcore.swagger/10.1.4/swashbuckle.aspnetcore.swagger.10.1.4.nupkg.sha512",
     "/Users/filipjurkovic/.nuget/packages/swashbuckle.aspnetcore.swaggergen/10.1.4/swashbuckle.aspnetcore.swaggergen.10.1.4.nupkg.sha512",
@@ -77,7 +77,6 @@
     "/Users/filipjurkovic/.nuget/packages/system.diagnostics.diagnosticsource/10.0.3/system.diagnostics.diagnosticsource.10.0.3.nupkg.sha512",
     "/Users/filipjurkovic/.nuget/packages/system.diagnostics.eventlog/8.0.1/system.diagnostics.eventlog.8.0.1.nupkg.sha512",
     "/Users/filipjurkovic/.nuget/packages/system.identitymodel.tokens.jwt/7.7.1/system.identitymodel.tokens.jwt.7.7.1.nupkg.sha512",
-    "/Users/filipjurkovic/.nuget/packages/system.io.hashing/10.0.2/system.io.hashing.10.0.2.nupkg.sha512",
     "/Users/filipjurkovic/.nuget/packages/system.io.pipelines/10.0.0/system.io.pipelines.10.0.0.nupkg.sha512",
     "/Users/filipjurkovic/.nuget/packages/system.memory.data/8.0.1/system.memory.data.8.0.1.nupkg.sha512",
     "/Users/filipjurkovic/.nuget/packages/system.security.cryptography.pkcs/8.0.1/system.security.cryptography.pkcs.8.0.1.nupkg.sha512",
