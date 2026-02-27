@@ -1,8 +1,11 @@
 using System.Data;
 using CartServicePoc;
+using CartServicePoc.Api.Validators;
 using CartServicePoc.Application.Interfaces;
 using CartServicePoc.Infrastructure.Database;
 using CartServicePoc.Infrastructure.Repositories;
+using FluentValidation;
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Data.SqlClient;
 using Serilog;
@@ -30,6 +33,10 @@ builder.Services.AddScoped<ICartService, CartServicePoc.Application.Services.Car
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+// Validators
+builder.Services.AddFluentValidationAutoValidation();
+builder.Services.AddValidatorsFromAssemblyContaining<AddCartItemRequestValidator>();
 
 var app = builder.Build();
 
