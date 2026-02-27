@@ -27,7 +27,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Api\Controllers\" />
       <Folder Include="Infrastructure\Cache\" />
     </ItemGroup>
 
