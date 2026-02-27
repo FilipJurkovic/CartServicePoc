@@ -6,7 +6,7 @@
       dockerfile: CartServicePoc/Dockerfile
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - ConnectionStrings__DefaultConnection=Server=sqlserver,1433;Database=CartServiceDb;User Id=Developer;Password=YourStrong!Passw0rd;TrustServerCertificate=true;
+      - ConnectionStrings__DefaultConnection=Server=sqlserver,1433;Database=CartServiceDb;User Id=sa;Password=YourStrong!Passw0rd;TrustServerCertificate=true;
       - ConnectionStrings__Redis=redis:6379
     depends_on:
       - sqlserver

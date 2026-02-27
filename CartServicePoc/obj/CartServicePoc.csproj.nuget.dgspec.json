@@ -13,6 +13,7 @@
         "packagesPath": "/Users/filipjurkovic/.nuget/packages/",
         "outputPath": "/Users/filipjurkovic/Dev/CartServicePoc/CartServicePoc/obj/",
         "projectStyle": "PackageReference",
+        "UsingMicrosoftNETSdk": false,
         "configFilePaths": [
           "/Users/filipjurkovic/.nuget/NuGet/NuGet.Config"
         ],
