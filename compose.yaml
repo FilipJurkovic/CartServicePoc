@@ -9,8 +9,10 @@
       - ConnectionStrings__DefaultConnection=Server=sqlserver,1433;Database=CartServiceDb;User Id=sa;Password=YourStrong!Passw0rd;TrustServerCertificate=true;
       - ConnectionStrings__Redis=redis:6379
     depends_on:
-      - sqlserver
-      - redis
+      sqlserver:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
     ports:
       - "5001:8080"
 
@@ -26,12 +28,24 @@
       - "1433:1433"
     volumes:
       - sqlserver-data:/var/opt/mssql
+    healthcheck:
+      test: ["CMD", "/opt/mssql-tools18/bin/sqlcmd", "-S", "localhost", "-U", "sa", "-P", "YourStrong!Passw0rd", "-Q", "SELECT 1", "-No"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 20s
 
   redis:
     image: redis:7-alpine
     container_name: cartservice-redis
     ports:
       - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+      start_period: 5s
 
 volumes:
   sqlserver-data:
